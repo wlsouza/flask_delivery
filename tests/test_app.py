@@ -1,6 +1,6 @@
 
 def test_app_is_created(app):
-    assert app.name == "flasklivery.app"
+    assert app.name == "devlivery.app"
 
 
 def test_config_is_loaded(config):

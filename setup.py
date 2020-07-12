@@ -6,7 +6,7 @@ def read(filename):
 
 
 setup(
-    name="flasklivery",
+    name="devlivery",
     version="0.1.0",
     description="Delivery app",
     packages=find_packages(),
