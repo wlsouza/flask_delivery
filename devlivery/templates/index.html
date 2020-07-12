@@ -1,11 +1,12 @@
 {% extends "base.html" %}
+{% import "macros/list_item.html" as list_item %}
 {% block top %}
     <section class="jumbotron text-center ">
         <p class="container text-monospace">
           <h1 class="jumbotron-heading font-weight-bold">De&lt;v&gt;livery</h1>
           <p class="lead text-muted font-weight-bold">
               Pois ninguém merece codar sem
-              <img src="{{url_for('static',filename='img/pizza_slogan.svg')}}" height="70" class="d-inline-block align-center" alt="">
+              <img src="{{url_for('static', filename='img/slogan_icons/'+icon_name)}}" height="70" class="d-inline-block align-center" alt="">
               !
           </p>
 <!--          <p>-->
@@ -14,4 +15,7 @@
 <!--          </p>-->
         </p>
     </section>
-{% endblock top%}
+{% endblock top %}
+{% block main %}
+  {{ list_item.cards([1,2,3,4]) }}
+{% endblock main %}

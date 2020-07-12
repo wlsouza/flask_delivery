@@ -1,0 +1,16 @@
+{% macro cards(items) %}
+    <div class="card-deck">
+        {% for item in items %}
+          <div class="card">
+            <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+            <div class="card-body">
+              <h5 class="card-title">Título do card</h5>
+              <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior, para demonstração.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Atualizados 3 minutos atrás</small>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+{% endmacro %}
