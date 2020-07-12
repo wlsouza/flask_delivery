@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    {% block head %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>De&lt;v&gt;livery</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.css')}}">
+    {% endblock head %}
+    {% block extra_css %}{% endblock %}
+    </head>
+    <body>
+    {% block body %}
+        {% block nav %}
+            <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+              <a class="navbar-brand font-weight-bold" href="#">
+                <img src="{{url_for('static',filename='img/devlivery_logo.svg')}}" height="40" class="d-inline-block align-center" alt="">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav font-weight-bold">
+                  <a class="nav-item nav-link active" href="{{url_for('site.index')}}" >Home</a>
+                  <a class="nav-item nav-link" href="#">Destaques</a>
+                  <a class="nav-item nav-link" href="#">Restaurantes</a>
+                  <a class="nav-item nav-link" href="#">Cupons</a>
+                </div>
+              </div>
+            </nav>
+        {% endblock nav %}
+        {% block top %}
+        {% endblock top %}
+        {% block main %}
+        {% endblock main %}
+        {% block footer %}
+        {% endblock footer %}
+    {% endblock body %}
+    <script src="{{url_for('static', filename='js/jquery-3.4.1.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.bundle.js')}}"></script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block top %}
+    <section class="jumbotron text-center ">
+        <p class="container text-monospace">
+          <h1 class="jumbotron-heading font-weight-bold">De&lt;v&gt;livery</h1>
+          <p class="lead text-muted font-weight-bold">
+              Pois ninguém merece codar sem
+              <img src="{{url_for('static',filename='img/pizza_slogan.svg')}}" height="70" class="d-inline-block align-center" alt="">
+              !
+          </p>
+<!--          <p>-->
+<!--            <a href="#" class="btn btn-primary my-2">Main call to action</a>-->
+<!--            <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
+<!--          </p>-->
+        </p>
+    </section>
+{% endblock top%}
