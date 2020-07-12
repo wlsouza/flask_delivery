@@ -1,5 +1,5 @@
 import pytest
-from flasklivery.app import create_app
+from devlivery.app import create_app
 
 
 @pytest.fixture(scope="module")

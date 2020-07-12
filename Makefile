@@ -16,6 +16,6 @@ clean:
 	pip install -e .[dev] --upgrade --no-cache
 
 test:
-	pytest  tests/ --cov=flasklivery
+	pytest  tests/ --cov=devlivery
 
 
