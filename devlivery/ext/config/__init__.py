@@ -3,6 +3,7 @@ from flask import Flask
 
 def init_app(app: Flask):
     app.config['SECRET_KEY']='uma_secret_key_muito_segura'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////devlivery.db'
 
     if app.debug:
         app.config['DEBUG_TB_TEMPLATE_EDITOR_ENABLED'] = True
