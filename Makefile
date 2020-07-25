@@ -13,9 +13,14 @@ clean:
 	rm -rf htmlcov
 	rm -rf .tox/
 	rm -rf docs/_build
-	pip install -e .[dev] --upgrade --no-cache
+	pip install -e .["dev"] --upgrade --no-cache
+
+init_db:
+	FLASK_APP=devlivery/app.py flask create-db
+	FLASK_APP=devlivery/app.py flask db upgrade
 
 test:
-	pytest  tests/ --cov=devlivery
+	FLASK_ENV=test pytest  tests/ --cov=devlivery
+
 
 

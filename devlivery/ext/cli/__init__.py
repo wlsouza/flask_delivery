@@ -10,6 +10,7 @@ def init_app(app: Flask):
         """This method initializes the database"""
         db.create_all()
 
+    # the command can also be registered like this:  app.cli.command()(list_orders)
     @app.cli.command()
     def list_orders():
         """This method list all orders"""
