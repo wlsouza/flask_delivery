@@ -5,6 +5,7 @@ from devlivery.ext import toolbar
 from devlivery.ext import db
 from devlivery.ext import migrate
 from devlivery.ext import cli
+from devlivery.ext import admin
 
 
 def create_app():
@@ -12,6 +13,7 @@ def create_app():
     config.init_app(app)
     db.init_app(app)
     migrate.init_app(app)
+    admin.init_app(app)
     cli.init_app(app)
     toolbar.init_app(app)
     site.init_app(app)
