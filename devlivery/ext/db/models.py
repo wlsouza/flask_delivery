@@ -30,6 +30,9 @@ class Store(db.Model):
     user = db.relationship("User", foreign_keys=user_id)
     category = db.relationship("Category", foreign_keys=category_id)
 
+    def __repr__(self):
+        return self.name
+
 
 class Items(db.Model):
     __tablename__ = "items"
@@ -40,7 +43,7 @@ class Items(db.Model):
     store_id = db.Column("store_id", db.Integer, db.ForeignKey("store.id"))
     available = db.Column("available", db.Boolean)
 
-    store = db.relationship("Store", foreign_keys="store_id")
+    store = db.relationship("Store", foreign_keys=store_id)
 
 
 class Order(db.Model):

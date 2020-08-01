@@ -20,7 +20,7 @@ init_db:
 	FLASK_APP=devlivery/app.py flask db upgrade
 
 test:
-	FLASK_ENV=test pytest  tests/ --cov=devlivery
+	SET FLASK_ENV=test pytest  tests/ --cov=devlivery
 
 
 
